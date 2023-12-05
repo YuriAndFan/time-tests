@@ -25,4 +25,4 @@ jobs:
           find . | grep -E "(__pycache__|\.pyc$)" | xargs rm -rf
       - name: Run tests with pytest
         run: |
-          pytest tests/
+          pytest
