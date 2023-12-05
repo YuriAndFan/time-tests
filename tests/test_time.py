@@ -1,4 +1,4 @@
-from times import compute_overlap_time, time_range
+from ..times import compute_overlap_time, time_range
 import pytest
 from pytest import raises
 
