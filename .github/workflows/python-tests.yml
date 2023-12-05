@@ -20,6 +20,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
           # Install any other dependencies required by your scripts here
+      - name: Remove __pycache__ and .pyc files
+        run: |
+          find . | grep -E "(__pycache__|\.pyc$)" | xargs rm -rf
       - name: Run tests with pytest
         run: |
-          pytest
+          pytest tests/
